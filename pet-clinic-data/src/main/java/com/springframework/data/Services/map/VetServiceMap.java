@@ -1,12 +1,11 @@
 package com.springframework.data.Services.map;
 
-import com.springframework.data.Services.CrudService;
-import com.springframework.data.Services.map.AbstractMapService;
+import com.springframework.data.Services.VetService;
 import com.springframework.data.model.Vet;
 
 import java.util.Set;
 
-public class VetServiceMap extends AbstractMapService<Vet, Long> implements CrudService<Vet, Long> {
+public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
 
     @Override
     public Set<Vet> findAll() {
