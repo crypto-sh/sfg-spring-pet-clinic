@@ -1,7 +1,7 @@
-package com.springframework.data.Services.map;
+package com.springframework.Services.map;
 
-import com.springframework.data.Services.OwnerService;
-import com.springframework.data.model.Owner;
+import com.springframework.Services.OwnerService;
+import com.springframework.model.Owner;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;

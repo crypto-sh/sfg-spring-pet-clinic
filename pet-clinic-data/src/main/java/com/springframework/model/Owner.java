@@ -1,4 +1,4 @@
-package com.springframework.data.model;
+package com.springframework.model;
 
 public class Owner extends Person {
 

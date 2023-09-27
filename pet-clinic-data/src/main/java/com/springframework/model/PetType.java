@@ -1,4 +1,4 @@
-package com.springframework.data.model;
+package com.springframework.model;
 
 public class PetType extends BaseEntity{
 

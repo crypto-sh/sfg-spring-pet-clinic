@@ -1,6 +1,6 @@
-package com.springframework.data.Services;
+package com.springframework.Services;
 
-import com.springframework.data.model.Owner;
+import com.springframework.model.Owner;
 
 public interface OwnerService extends CrudService<Owner,Long> {
 
