@@ -1,14 +1,13 @@
 package com.springframework.Services.map;
 
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import com.springframework.model.BaseEntity;
 
-public abstract class AbstractMapService<T, ID> {
+import java.util.*;
 
-    protected Map<ID, T> map = new HashMap<>();
+public abstract class AbstractMapService<T extends BaseEntity, ID extends Long> {
+
+    protected Map<Long, T> map = new HashMap<>();
 
     protected Set<T> findAll(){
         return new HashSet<>(map.values());
@@ -18,9 +17,24 @@ public abstract class AbstractMapService<T, ID> {
         return map.get(id);
     }
 
-    protected T save(ID id, T object){
-        map.put(id, object);
-        return object;
+    protected T save( T object){
+        if (object != null) {
+            if (object.getId() == null){
+                object.setId(getNextId());
+            }
+            map.put(object.getId(), object);
+            return object;
+        } else {
+            throw new RuntimeException("Object can not be null");
+        }
+    }
+
+    private Long getNextId() {
+        try {
+            return Collections.max(map.keySet()) + 1;
+        } catch (NoSuchElementException e) {
+            return 1L;
+        }
     }
 
     protected void deleteById(ID id){
