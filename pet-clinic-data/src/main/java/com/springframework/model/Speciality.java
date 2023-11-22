@@ -1,6 +1,6 @@
 package com.springframework.model;
 
-public class Specialty extends BaseEntity {
+public class Speciality extends BaseEntity {
 
     String description;
 

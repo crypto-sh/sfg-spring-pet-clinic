@@ -1,25 +1,25 @@
 package com.springframework.Services.map;
 
-import com.springframework.Services.SpecialtiesService;
-import com.springframework.model.Specialty;
+import com.springframework.Services.SpecialityService;
+import com.springframework.model.Speciality;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
-public class SpecialtyMapService extends AbstractMapService<Specialty, Long> implements SpecialtiesService {
+public class SpecialtyMapService extends AbstractMapService<Speciality, Long> implements SpecialityService {
     @Override
-    public Set<Specialty> findAll() {
+    public Set<Speciality> findAll() {
         return super.findAll();
     }
 
     @Override
-    public Specialty findById(Long id) {
+    public Speciality findById(Long id) {
         return super.findById(id);
     }
 
     @Override
-    public Specialty save(Specialty object) {
+    public Speciality save(Speciality object) {
         return super.save(object);
     }
 
@@ -29,7 +29,7 @@ public class SpecialtyMapService extends AbstractMapService<Specialty, Long> imp
     }
 
     @Override
-    public void delete(Specialty object) {
+    public void delete(Speciality object) {
         super.delete(object);
     }
 }
